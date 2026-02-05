@@ -13,25 +13,34 @@
 
 <!--
   ACTION REQUIRED: Replace the content in this section with the technical details
-  for the project. The structure here is presented in advisory capacity to guide
-  the iteration process.
+  for the specific game/feature. The structure here reflects Party Games standards.
 -->
 
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: TypeScript 5+ with React 18+
+**Build Tool**: Vite 5+
+**Primary Dependencies**: React Router (if multi-game routing), [game-specific libs or NONE]
+**Storage**: localStorage for game state/scores, sessionStorage for temporary data (if needed)
+**Testing**: Vitest (if tests requested) or Manual testing (default)
+**Target Platform**: Modern browsers (Chrome 90+, Safari 14+, Firefox 88+), Mobile responsive
+**Design System**: Black/white minimalist, Google Sans font
+**Performance Goals**: <3s initial load on 3G, 60fps gameplay, <500KB initial bundle
+**Constraints**: Static hosting only, client-side only, no server dependencies
+**Scale/Scope**: [e.g., single game, game collection feature, UI component library]
 
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+| Principle | Gate | Status |
+|-----------|------|--------|
+| **Game-First Architecture** | Game/feature is self-contained module with clear entry/exit points | ⬜ |
+| **Visual Consistency** | Design uses only black/white/grayscale + Google Sans | ⬜ |
+| **Static-First Deployment** | No server-side dependencies, client-side only | ⬜ |
+| **Component Reusability** | Shared components have TypeScript interfaces, independently testable | ⬜ |
+| **Performance & Accessibility** | Targets <3s load, 60fps, WCAG AA compliance | ⬜ |
+| **Styling Architecture** | No inline styles, uses shared components, CSS separation enforced | ⬜ |
+
+**Constitution Compliance**: [PASS/FAIL with explanation if violations need justification]
 
 ## Project Structure
 
@@ -51,44 +60,29 @@ specs/[###-feature]/
 <!--
   ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
   for this feature. Delete unused options and expand the chosen structure with
-  real paths (e.g., apps/admin, packages/something). The delivered plan must
+  real paths (e.g., games/tic-tac-toe, components/Button). The delivered plan must
   not include Option labels.
 -->
 
 ```text
-# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
+# React + Vite Frontend (Party Games standard structure)
 src/
-├── models/
-├── services/
-├── cli/
-└── lib/
+├── components/          # Shared UI components (Button, Card, Timer, etc.)
+├── games/              # Individual game modules
+│   └── [game-name]/    # Each game in its own folder
+│       ├── Game.tsx    # Main game component
+│       ├── types.ts    # Game-specific types
+│       └── utils.ts    # Game logic utilities
+├── lib/                # Shared utilities (scoring, animations, storage)
+├── styles/             # Design system (theme, tokens, global styles)
+├── App.tsx             # Root component with routing
+└── main.tsx            # Vite entry point
 
-tests/
-├── contract/
-├── integration/
-└── unit/
+tests/                  # Test files (if testing requested)
+├── components/
+└── games/
 
-# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
-
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
-
-# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
+public/                 # Static assets (fonts, icons, images)
 ```
 
 **Structure Decision**: [Document the selected structure and reference the real

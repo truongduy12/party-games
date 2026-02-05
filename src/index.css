@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-google-sans bg-party-white text-party-black;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+}

@@ -20,10 +20,13 @@ description: "Task list template for feature implementation"
 
 ## Path Conventions
 
-- **Single project**: `src/`, `tests/` at repository root
-- **Web app**: `backend/src/`, `frontend/src/`
-- **Mobile**: `api/src/`, `ios/src/` or `android/src/`
-- Paths shown below assume single project - adjust based on plan.md structure
+**Party Games Project**: All paths relative to repository root:
+- Components: `src/components/`
+- Games: `src/games/[game-name]/`
+- Shared utilities: `src/lib/`
+- Styles/theme: `src/styles/`
+- Tests: `tests/` (if testing requested)
+- Static assets: `public/`
 
 <!-- 
   ============================================================================
@@ -48,28 +51,30 @@ description: "Task list template for feature implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
+- [ ] T001 Initialize Vite + React + TypeScript project at repository root
+- [ ] T002 [P] Configure ESLint + Prettier with React/TypeScript rules
+- [ ] T003 [P] Setup project structure (src/components, src/games, src/lib, src/styles)
+- [ ] T004 Install and configure Google Sans font from Google Fonts
+- [ ] T005 [P] Create design system theme file with black/white color tokens
 
 ---
 
 ## Phase 2: Foundational (Blocking Prerequisites)
 
-**Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
+**Purpose**: Core infrastructure that MUST be complete before ANY game/feature can be implemented
 
-**⚠️ CRITICAL**: No user story work can begin until this phase is complete
+**⚠️ CRITICAL**: No game development can begin until this phase is complete
 
-Examples of foundational tasks (adjust based on your project):
+Examples of foundational tasks for frontend games (adjust based on your feature):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T006 Setup React Router for game navigation (if multi-game)
+- [ ] T007 [P] Create base Layout component with minimalist styling
+- [ ] T008 [P] Implement shared UI components (Button, Card, Timer, etc.) in src/components/
+- [ ] T009 Create game state management utilities in src/lib/ (if needed)
+- [ ] T010 [P] Setup Vite build optimization and bundle size monitoring
+- [ ] T011 [P] Configure responsive breakpoints and mobile styles
 
-**Checkpoint**: Foundation ready - user story implementation can now begin in parallel
+**Checkpoint**: Foundation ready - game implementation can now begin in parallel
 
 ---
 
@@ -77,23 +82,24 @@ Examples of foundational tasks (adjust based on your project):
 
 **Goal**: [Brief description of what this story delivers]
 
-**Independent Test**: [How to verify this story works on its own]
+**Independent Test**: [How to verify this story works on its own - e.g., "Navigate to /game-name and play through one complete round"]
 
 ### Tests for User Story 1 (OPTIONAL - only if tests requested) ⚠️
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T010 [P] [US1] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T011 [P] [US1] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T012 [P] [US1] Component test for [ComponentName] in tests/components/[ComponentName].test.tsx
+- [ ] T013 [P] [US1] E2E test for [game flow] in tests/e2e/[game-name].spec.ts (if Playwright configured)
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
-- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
-- [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
-- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T016 [US1] Add validation and error handling
-- [ ] T017 [US1] Add logging for user story 1 operations
+- [ ] T014 [P] [US1] Create game types/interfaces in src/games/[game-name]/types.ts
+- [ ] T015 [P] [US1] Implement game logic utilities in src/games/[game-name]/utils.ts
+- [ ] T016 [US1] Build main Game component in src/games/[game-name]/Game.tsx (depends on T014, T015)
+- [ ] T017 [US1] Add game route to React Router configuration
+- [ ] T018 [US1] Style game with design system tokens (black/white theme)
+- [ ] T019 [US1] Add keyboard navigation and ARIA labels for accessibility
+- [ ] T020 [US1] Test performance on mobile devices (60fps target)
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 

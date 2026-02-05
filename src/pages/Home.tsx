@@ -5,11 +5,11 @@ import { useScores } from '../lib/scoreManager';
 // Placeholder game data - 6 cards with Vietnamese titles
 const PLACEHOLDER_GAMES: GameCardData[] = [
   {
-    id: 'game-1',
-    title: 'Trò chơi 1',
-    status: 'coming-soon',
+    id: 'idiom-game',
+    title: 'Mô Tả Thành Ngữ',
+    status: 'available',
     icon: '/placeholder-game-icon.svg',
-    route: null,
+    route: '/idiom-game',
   },
   {
     id: 'game-2',

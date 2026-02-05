@@ -7,7 +7,11 @@ export function GameCard({ title, icon, status, route }: GameCardData) {
   const cardContent = (
     <>
       <div className="aspect-square bg-party-gray-200 rounded flex items-center justify-center w-24 h-24">
-        <img src={icon} alt={`${title} icon`} className="w-full h-full object-contain" />
+        <img
+          src={`${import.meta.env.BASE_URL}${icon}`}
+          alt={`${title} icon`}
+          className="w-full h-full object-contain"
+        />
       </div>
 
       <h3 className="text-xl font-medium text-party-black">{title}</h3>

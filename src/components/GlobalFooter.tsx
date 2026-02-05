@@ -13,7 +13,7 @@ export function GlobalFooter() {
         {!isHomePage && (
           <Link
             to="/"
-            className="flex flex-1 items-center gap-2 px-4 py-2 text-white rounded hover:bg-white/20 focus:ring-2 focus:ring-white/50 focus:outline-none transition-colors"
+            className="flex flex-1 items-center justify-start gap-2 px-4 py-2 text-white rounded hover:bg-white/20 focus:outline-none transition-colors"
             aria-label="Về trang chủ"
           >
             <Home size={20} />
@@ -23,7 +23,7 @@ export function GlobalFooter() {
         <button
           onClick={resetScores}
           disabled={!canReset}
-          className="flex flex-1 items-center gap-2 px-4 py-2 text-white rounded hover:bg-white/20 disabled:bg-white/5 disabled:text-gray-400 disabled:cursor-not-allowed focus:ring-2 focus:ring-white/50 focus:outline-none transition-colors"
+          className="flex flex-1 items-center justify-end gap-2 px-4 py-2 text-white rounded hover:bg-white/20 disabled:bg-white/5 disabled:text-gray-400 disabled:cursor-not-allowed focus:outline-none transition-colors"
           aria-label="Reset điểm"
         >
           <RotateCcw size={20} />

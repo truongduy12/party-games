@@ -5,4 +5,5 @@ export interface GameCardData {
   status: 'coming-soon' | 'available';
   icon: string;
   route: string | null;
+  hasScoring?: boolean;
 }

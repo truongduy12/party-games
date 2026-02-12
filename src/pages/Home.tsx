@@ -1,52 +1,6 @@
 import { GameCard } from '../components/GameCard';
-import { type GameCardData } from '../types/GameCard';
 import { useScores } from '../lib/scoreManager';
-
-// Placeholder game data - 6 cards with Vietnamese titles
-const PLACEHOLDER_GAMES: GameCardData[] = [
-  {
-    id: 'idiom-game',
-    title: 'Mô Tả Thành Ngữ',
-    status: 'available',
-    icon: '/placeholder-game-icon.svg',
-    route: '/idiom-game',
-  },
-  {
-    id: 'game-2',
-    title: 'Trò chơi 2',
-    status: 'coming-soon',
-    icon: '/placeholder-game-icon.svg',
-    route: null,
-  },
-  {
-    id: 'game-3',
-    title: 'Trò chơi 3',
-    status: 'coming-soon',
-    icon: '/placeholder-game-icon.svg',
-    route: null,
-  },
-  {
-    id: 'game-4',
-    title: 'Trò chơi 4',
-    status: 'coming-soon',
-    icon: '/placeholder-game-icon.svg',
-    route: null,
-  },
-  {
-    id: 'game-5',
-    title: 'Trò chơi 5',
-    status: 'coming-soon',
-    icon: '/placeholder-game-icon.svg',
-    route: null,
-  },
-  {
-    id: 'game-6',
-    title: 'Trò chơi 6',
-    status: 'coming-soon',
-    icon: '/placeholder-game-icon.svg',
-    route: null,
-  },
-];
+import { GAMES } from '../config/games';
 
 export function Home() {
   const { resetScores, canReset, scores } = useScores();
@@ -69,7 +23,7 @@ export function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PLACEHOLDER_GAMES.map((game) => (
+          {GAMES.map((game) => (
             <GameCard key={game.id} {...game} />
           ))}
         </div>

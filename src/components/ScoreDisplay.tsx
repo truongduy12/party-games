@@ -1,7 +1,16 @@
+import { useLocation } from 'react-router-dom';
 import { useScores } from '../lib/scoreManager';
+import { getGameByPath } from '../config/games';
 
 export function ScoreDisplay() {
   const { scores } = useScores();
+  const location = useLocation();
+  const currentGame = getGameByPath(location.pathname);
+
+  // If game explicitly says no scoring, OR if not found (maybe home/setup?), keep default behavior?
+  // Current behavior was: show unless explicitly hidden.
+  // New behavior: Show if game.hasScoring is true OR undefined (default). Hide if false.
+  if (currentGame?.hasScoring === false) return null;
 
   return (
     <header

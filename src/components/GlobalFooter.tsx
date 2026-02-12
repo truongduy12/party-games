@@ -1,11 +1,14 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useScores } from '../lib/scoreManager';
 import { Home, RotateCcw } from 'lucide-react';
+import { getGameByPath } from '../config/games';
 
 export function GlobalFooter() {
   const { resetScores, canReset } = useScores();
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const currentGame = getGameByPath(location.pathname);
+  const showReset = !isHomePage && currentGame?.hasScoring !== false;
 
   return (
     <footer className="fixed bottom-0 left-0 right-0 bg-party-black text-party-white z-50 shadow-md">
@@ -13,22 +16,24 @@ export function GlobalFooter() {
         {!isHomePage && (
           <Link
             to="/"
-            className="flex flex-1 items-center justify-start gap-2 px-4 py-2 text-white rounded hover:bg-white/20 focus:outline-none transition-colors"
+            className="flex flex-1 items-center justify-center gap-2 px-4 py-2 text-white rounded hover:bg-white/20 focus:outline-none transition-colors"
             aria-label="Về trang chủ"
           >
             <Home size={20} />
             <span>Trang chủ</span>
           </Link>
         )}
-        <button
-          onClick={resetScores}
-          disabled={!canReset}
-          className="flex flex-1 items-center justify-end gap-2 px-4 py-2 text-white rounded hover:bg-white/20 disabled:bg-white/5 disabled:text-gray-400 disabled:cursor-not-allowed focus:outline-none transition-colors"
-          aria-label="Reset điểm"
-        >
-          <RotateCcw size={20} />
-          <span>Reset điểm</span>
-        </button>
+        {showReset && (
+          <button
+            onClick={resetScores}
+            disabled={!canReset}
+            className="flex flex-1 items-center justify-center gap-2 px-4 py-2 text-white rounded hover:bg-white/20 disabled:bg-white/5 disabled:text-gray-400 disabled:cursor-not-allowed focus:outline-none transition-colors"
+            aria-label="Reset điểm"
+          >
+            <RotateCcw size={20} />
+            <span>Reset điểm</span>
+          </button>
+        )}
       </div>
     </footer>
   );

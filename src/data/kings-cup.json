@@ -1,0 +1,56 @@
+{
+    "rules": {
+        "A": {
+            "title": "All",
+            "action": "Tất cả mọi người cùng cạn!"
+        },
+        "2": {
+            "title": "To You",
+            "action": "Chỉ định một người bất kỳ phải uống."
+        },
+        "3": {
+            "title": "Three for Me",
+            "action": "Chính bạn phải uống."
+        },
+        "4": {
+            "title": "House",
+            "action": "Tất cả các bạn nữ trong bàn uống."
+        },
+        "5": {
+            "title": "Memory Roulette",
+            "action": "Mở danh sách bạn bè MXH, dừng ngẫu nhiên ở một người. Phải kể một kỷ niệm về họ, không nhớ thì uống!"
+        },
+        "6": {
+            "title": "Man",
+            "action": "Tất cả các bạn nam trong bàn uống."
+        },
+        "7": {
+            "title": "Music Soulmate",
+            "action": "Bạn chọn 1 người nữa cùng mở nhạc random trên Spotify/YouTube. Khác thể loại: 2 bạn uống. Giống thể loại: Cả bàn uống."
+        },
+        "8": {
+            "title": "Mate",
+            "action": "Chọn một người 'vận mệnh'. Họ uống bạn uống và ngược lại xuyên suốt cuộc chơi."
+        },
+        "9": {
+            "title": "The Pose",
+            "action": "Người bốc làm một tư thế kỳ quặc. Tất cả phải làm theo y hệt. Ai chậm nhất hoặc làm sai: Uống!"
+        },
+        "10": {
+            "title": "Phone Flip",
+            "action": "Người bốc bài đếm 1-2-3, mọi người phải chọn lật ngửa điện thoại lên hoặc giữ nguyên trạng thái úp. Nếu số người Ngửa ít hơn số người Úp, Ngửa phải uống. Và ngược lại."
+        },
+        "J": {
+            "title": "Oẳn Tù Tì Tập Thể",
+            "action": "Người bốc đếm 1-2-3, cả bàn cùng ra tay. Ai thua người bốc: Uống. Nếu người bốc thua tất cả: Uống gấp đôi!"
+        },
+        "Q": {
+            "title": "Medusa",
+            "action": "Cả bàn cúi mặt, đếm 1-2-3 cùng ngẩng lên nhìn trái hoặc phải. Nếu hai người vô tình chạm mắt nhau: Cùng cạn ly."
+        },
+        "K": {
+            "title": "The King's Wheel",
+            "action": "Kích hoạt Vòng quay may mắn trên màn hình."
+        }
+    }
+}

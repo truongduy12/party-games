@@ -35,7 +35,7 @@ export function SetupScreen() {
     };
 
     return (
-        <div className="flex flex-col items-center w-full max-w-md mx-auto">
+        <div className="flex flex-col items-center w-full max-w-md mx-auto pb-4">
             <div className="bg-party-white text-party-black rounded-2xl p-8 w-full shadow-lg text-center">
                 <Users className="w-16 h-16 mx-auto mb-4 text-party-black" />
                 <h2 className="text-2xl font-bold mb-6">Chọn số người chơi</h2>

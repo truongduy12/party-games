@@ -29,7 +29,6 @@ TypeScript 5+ with React 18+: Follow standard conventions
 - 001-ai-la-gian-diep: Added TypeScript 5.9+ with React 19.2+ + `react-router-dom`, `lucide-react`, Tailwind CSS
 - 002-idiom-game: Added TypeScript 5+ with React 18+ + React Router 6+ (routing), NO new dependencies required
 
-- 001-home-scoreboard: Added TypeScript 5+ with React 18+ + React Router 6+ (for home page routing), Tailwind CSS 3+
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

@@ -18,11 +18,12 @@ export const GAMES: GameCardData[] = [
         hasScoring: false,
     },
     {
-        id: 'game-2',
-        title: 'Trò chơi 2',
-        status: 'coming-soon',
-        icon: '/placeholder-game-icon.svg',
-        route: null,
+        id: 'kings-cup',
+        title: "King's Cup",
+        status: 'available',
+        icon: '/kings-cup.svg',
+        route: '/kings-cup',
+        hasScoring: false,
     },
     {
         id: 'game-3',

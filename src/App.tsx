@@ -4,6 +4,7 @@ import { ScoreDisplay } from './components/ScoreDisplay';
 import IdiomGame from './games/idiom-game/IdiomGame';
 import WhoIsTheSpy from './games/who-is-the-spy/WhoIsTheSpy';
 import KingsCup from './games/kings-cup/KingsCup';
+import TickingBomb from './games/ticking-bomb/TickingBomb';
 import { Home } from './pages/Home';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/idiom-game" element={<IdiomGame />} />
         <Route path="/who-is-the-spy" element={<WhoIsTheSpy />} />
         <Route path="/kings-cup" element={<KingsCup />} />
+        <Route path="/ticking-bomb" element={<TickingBomb />} />
       </Routes>
       <GlobalFooter />
     </HashRouter>

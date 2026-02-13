@@ -34,6 +34,13 @@ export const GAMES: GameCardData[] = [
         hasScoring: false,
     },
     {
+        id: 'sync-challenge',
+        title: 'Đấu Trí Đồng Lòng',
+        status: 'available',
+        icon: '/sync-challenge.svg',
+        route: '/sync-challenge',
+    },
+    {
         id: 'coming-soon',
         title: 'Trò chơi ...',
         status: 'coming-soon',

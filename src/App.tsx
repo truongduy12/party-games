@@ -5,6 +5,7 @@ import IdiomGame from './games/idiom-game/IdiomGame';
 import WhoIsTheSpy from './games/who-is-the-spy/WhoIsTheSpy';
 import KingsCup from './games/kings-cup/KingsCup';
 import TickingBomb from './games/ticking-bomb/TickingBomb';
+import SyncChallenge from './games/sync-challenge/SyncChallenge';
 import { Home } from './pages/Home';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/who-is-the-spy" element={<WhoIsTheSpy />} />
         <Route path="/kings-cup" element={<KingsCup />} />
         <Route path="/ticking-bomb" element={<TickingBomb />} />
+        <Route path="/sync-challenge" element={<SyncChallenge />} />
       </Routes>
       <GlobalFooter />
     </HashRouter>
